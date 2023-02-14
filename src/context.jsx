@@ -1,39 +1,38 @@
-import React, { useContext , useEffect } from 'react';
-
+import React, { useContext , useEffect, useState } from 'react';
 import axios from 'axios';
 
 const AppContext = React.createContext();
 
 const randomMealUrl = `https://www.themealdb.com/api/json/v1/1/random.php`;
-
-const fetchByUrl = async (link) => {
-  try {
-
-    const {data:{meals}} = await axios(link);
-    console.log(meals);
-
-    return meals;
-
-  } catch (error) {
-    console.log(error);
-    return null;
-
-  }
-}
+const searchMealUrl = `https://www.themealdb.com/api/json/v1/1/search.php`;
 
 const AppProvider = ({children}) => {
+  
+  const [meals, setMeals] = useState([]);
 
-  const searchMealByUrl = async (searchParam) => {
-    const result = await fetchAndReturnByURL(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchParam}`);
-    console.log(result);
+  const fetchByUrl = async (link, searchParam = null) => {
+    try {
+  
+      if(typeof(searchParam) == "string") link = link + "?s=" + searchParam;
+  
+      const { data : { meals } } = await axios(link);
+      setMeals(meals);
+  
+    } catch (error) {
+      console.error(error);
+      return null;
+  
+    }
   }
 
   useEffect( () => {
-    fetchByUrl(randomMealUrl);
+    fetchByUrl(searchMealUrl, "apple");
   }, []);
 
 
-  return <AppContext.Provider value="test">{children}</AppContext.Provider>;
+  return <AppContext.Provider value={{meals}}>
+    {children}
+  </AppContext.Provider>;
 
 }
 
