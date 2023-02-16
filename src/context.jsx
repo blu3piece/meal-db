@@ -14,11 +14,15 @@ const AppProvider = ({children}) => {
   const fetchByUrl = async (link, searchParam = null) => {
     setLoading(true);
     try {
-      
       if(typeof(searchParam) == "string") link = link + "?s=" + searchParam;
       
       const { data : { meals } } = await axios(link);
-      setMeals(meals);
+      if(meals) {
+        setMeals(meals);
+      }
+      else {
+        setMeals([]);
+      }
   
     } catch (error) {
       console.error(error);
