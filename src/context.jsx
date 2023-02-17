@@ -32,7 +32,7 @@ const AppProvider = ({children}) => {
   }
 
   useEffect( () => {
-    fetchByUrl(searchMealUrl, "aaa");
+    fetchByUrl(searchMealUrl, "a");
   }, []);
 
 
