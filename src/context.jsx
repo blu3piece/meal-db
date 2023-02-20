@@ -33,6 +33,10 @@ const AppProvider = ({children}) => {
 
   useEffect( () => {
     fetchByUrl(searchMealUrl, searchTerm);
+  }, []);
+
+  useEffect( () => {
+    if(searchTerm) fetchByUrl(searchMealUrl, searchTerm);
   }, [searchTerm]);
 
   const fetchRandomMeal = () => fetchByUrl(randomMealUrl);

@@ -14,7 +14,6 @@ const Search = () => {
     e.preventDefault();
     if(text) {
       setSearchTerm(text);
-      setText('');
     }
   }
   
