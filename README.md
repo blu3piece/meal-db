@@ -6,7 +6,7 @@ freecodecamp 에서 제공하는 클론코딩 프로젝트입니다. 별도의 �
 
 본 프로젝트는 `npm` 패키지 매니저로 관리되는 `Vite` 빌드 도구로 구성된 `React` 프로젝트입니다.
 
-### Used Logics
+### Used Dependencies
 
 - [Context API](https://ko.reactjs.org/docs/context.html)
 
@@ -15,6 +15,10 @@ Context API를 클론코딩에서 소개했는데 처음에 이해가 잘 가지
 - [Axios]()
 
 내장된 `fetch API`와 비교하여 왜 굳이 `Axios`를 사용하는지 이해가 가지 않는데, 이와의 차이점을 위주로 설명을 적을 예정입니다.
+
+- [React-Icons](https://react-icons.github.io/react-icons/)
+
+리액트 컴포넌트 (JSX) 에서 사용가능한 다양한 아이콘들을 모아놓은 NPM 패키지입니다. 마땅한 아이콘이 필요할 때 사용될 수 있습니다.
 
 ## Features
 
