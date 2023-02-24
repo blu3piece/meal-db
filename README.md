@@ -6,6 +6,8 @@ freecodecamp 에서 제공하는 클론코딩 프로젝트입니다. 별도의 �
 
 본 프로젝트는 `npm` 패키지 매니저로 관리되는 `Vite` 빌드 도구로 구성된 `React` 프로젝트입니다.
 
+`freecodecamp`에서 완성된 본 클론코딩 프로젝트는 [이곳](https://meals-application.john-smilga.repl.co/) 에서 확인하실 수 있습니다.
+
 ### Used Dependencies
 
 - [Context API](https://ko.reactjs.org/docs/context.html)
