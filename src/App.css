@@ -316,3 +316,51 @@ ul {
 .close-btn:hover {
     background:var(--red-light);
 }
+
+.favorite-section {
+    background:var(--black);
+    height:10rem;
+    width:100%;
+    margin:0 auto;
+}
+
+.favorite-section, .favorite-section * {
+    transition:var(--transition);
+}
+
+.favorite-container {
+    max-width:var(--max-width);
+    height:10rem;
+    margin:0 auto;
+    padding:0.3rem;
+}
+
+.favorite-title {
+    color:var(--white);
+    font-size:1.5rem;
+}
+
+.favorite-thumbnail {
+    cursor:pointer;
+    height:4rem;
+    border-radius:50%;
+    border:0.3rem solid var(--white);
+}
+
+.favorite-item-list {
+    display:flex;
+    gap: 1.5rem;
+}
+
+.favorite-item {
+    display: flex;
+    width: 4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.favorite-remove {
+    cursor:pointer;
+    color:var(--grey-400);
+}

@@ -10,7 +10,6 @@ const Search = () => {
     };
 
     const handleSubmit = (e) => {
-        console.log("submitted!");
         e.preventDefault();
         if (text) {
             setSearchTerm(text);

@@ -3,8 +3,6 @@ import { useGlobalContext } from "../context";
 const Modal = () => {
     const { selectedMeal, setShowModal } = useGlobalContext();
 
-    
-
     const handleCloseButton = () => {
         setShowModal(false);
     };
@@ -23,6 +21,9 @@ const Modal = () => {
                         </h4>
                         <p className="modal-instruction">
                             {selectedMeal.strInstructions}
+                        </p>
+                        <p className="modal-source">
+                            <a href={selectedMeal.strSource}>Original Source</a>
                         </p>
                         <button
                             className="btn close-btn"
